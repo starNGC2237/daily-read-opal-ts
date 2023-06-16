@@ -11,7 +11,7 @@ const router = createRouter({
             name: 'home',
             component: AppHome,
             meta:{
-                parts:['header','footer']
+                parts:['header','footer'] as string[]
             }
         },
         {
@@ -19,7 +19,7 @@ const router = createRouter({
             name: 'about',
             component: About,
             meta:{
-                parts:['header']
+                parts:['header'] as string[]
             }
         },
         {
@@ -27,7 +27,7 @@ const router = createRouter({
             name:'dailySentence',
             component:AppDailySentence,
             meta:{
-                parts:['header','footer']
+                parts:['header','footer'] as string[]
             }
         }
     ]

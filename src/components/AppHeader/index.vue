@@ -8,10 +8,10 @@
           <img src="@/assets/opal.png"  alt="opal"/>
         </router-link>
         <nav>
-          <span @click="this.$router.push('/dailySentence')">
+          <span @click="$router.push('/dailySentence')">
             每日一言
           </span>
-          <span @click="this.$router.push('/about')">关于我们</span>
+          <span @click="$router.push('/about')">关于我们</span>
         </nav>
       </div>
     </header>

@@ -6,7 +6,7 @@ import AppFooter from '@/components/AppFooter/index.vue'
 <template>
   <AppHeader/>
   <RouterView />
-  <AppFooter v-if="$route.meta.parts && $route.meta.parts.includes('footer')"/>
+  <AppFooter v-if="$route.meta.parts && Array.isArray($route.meta.parts) && $route.meta.parts.includes('footer')"/>
 </template>
 
 <style scoped lang="scss">
