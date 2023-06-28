@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="container">
-          <a href="/public/opal.apk" target="_blank" rel="noopener noreferrer">
+          <a href="/opal.apk" target="_blank" rel="noopener noreferrer">
             点击下载（适用于安卓7以上）
           </a>
         </div>
