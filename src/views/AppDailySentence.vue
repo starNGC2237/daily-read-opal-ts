@@ -2,7 +2,9 @@
 import {onMounted, reactive, ref} from "vue";
 import {getSentence} from "@/api/sentence/index.js";
 interface Data {
-  hitokoto?: string
+  hitokoto?: string;
+  from_who?: string;
+  from?: string;
   // 其他属性
 }
 let data = reactive<Data>({})
@@ -23,6 +25,7 @@ onMounted(()=>{
     <h1>每日一言</h1>
     <span v-if="loading">加载中...</span>
     <q v-if="!loading && data.hitokoto">{{data.hitokoto}}</q>
+    <span class="end" v-if="!loading && data.hitokoto">——《{{data.from}}》&nbsp;{{data.from_who}}</span>
   </div>
   
 </section>
@@ -42,6 +45,10 @@ section{
   height: 100%;
   box-sizing: border-box;
   padding-bottom: 1rem;
+  .end{
+    width: 100%;
+    text-align: end;
+  }
 }
 @media (max-width: 1226px) {
   .container{

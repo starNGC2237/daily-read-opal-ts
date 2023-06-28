@@ -7,11 +7,27 @@
         <router-link to="/" class="logo">
           <img src="@/assets/opal.png"  alt="opal"/>
         </router-link>
-        <nav>
+        <nav class="large_nav">
           <span @click="$router.push('/dailySentence')">
             每日一言
           </span>
-          <span @click="$router.push('/about')">关于我们</span>
+          <span @click="$router.push('/download')">
+            下载app
+          </span>
+          <span @click="$router.push('/about')">
+            关于我们
+          </span>
+        </nav>
+        <nav class="small_nav">
+          <span @click="$router.push('/dailySentence')">
+            一言
+          </span>
+          <span @click="$router.push('/download')">
+            app
+          </span>
+          <span @click="$router.push('/about')">
+            关于
+          </span>
         </nav>
       </div>
     </header>
@@ -44,11 +60,11 @@ header {
       height: 100%;
     }
   }
-  nav{
+  .large_nav{
     display: flex;
-    cursor: pointer;
     span{
       box-sizing: border-box;
+      cursor: pointer;
     }
     span:hover{
       color: var(--green);
@@ -57,11 +73,30 @@ header {
       margin-right: 10px;
     }
   }
+  .small_nav{
+    display: none;
+  }
 }
 @media (max-width: 1226px) {
   .container{
     width: 100%;
     padding: 0 0.5rem;
+    .large_nav{
+      display: none;
+    }
+    .small_nav{
+      display: flex;
+      span{
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      span:hover{
+        color: var(--green);
+      }
+      span:not(:last-child){
+        margin-right: 10px;
+      }
+    }
   }
 }
 </style>
